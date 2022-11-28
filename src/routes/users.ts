@@ -3,5 +3,5 @@ export const UserRouter = express.Router();
 
 /* GET users listing. */
 UserRouter.get("/", function (req, res, next) {
-  res.send("respond with a resource");
+  res.send("responds to user");
 });
