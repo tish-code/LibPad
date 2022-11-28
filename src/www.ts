@@ -12,7 +12,7 @@ import http from "http";
  * Get port from environment and store in Express.
  */
 
-const debug = DBG("libpad:server");
+export const debug = DBG("libpad:server");
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
