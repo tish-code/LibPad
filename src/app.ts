@@ -2,7 +2,6 @@ import createError from "http-errors";
 import express, { NextFunction, Response, Request } from "express";
 import path from "path";
 import { debug } from "www";
-import { IndexRouter } from "./routes/index";
 import { useDataBase } from "libs/db";
 import { UserRouter } from "routes/users/users.controller";
 
@@ -25,7 +24,6 @@ app.set("view engine", "jade");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/", IndexRouter);
 app.use("/user", UserRouter);
 
 app.use(function (req, res, next) {
