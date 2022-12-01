@@ -4,9 +4,8 @@ export const UserRouter = express.Router();
 
 UserRouter.post("/", async (req, res, next) => {
   try {
-    const result = await userService.createUser(req.body);
+    const result = await userService.userSignUp(req.body);
     res.send(result);
-    // res.send("hello");
   } catch (e) {
     next(e);
   }

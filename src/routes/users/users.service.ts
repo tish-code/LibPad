@@ -7,7 +7,6 @@ class UserService {
   async userSignUp(body: IUser) {
     try {
       const { password } = body;
-      console.log(password);
       const hashedPassword = await hashPassword(password);
       const newUser = await UserModel.create({
         ...body,
